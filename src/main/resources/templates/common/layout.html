@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="/common/common.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <head>
     <meta charset="UTF-8">
     <!--    <div th:replace="common/darkMod :: darkFragment"></div>-->
@@ -14,29 +15,29 @@
     <div class="top-bar h-24 w-full bg-white relative">
         <div class="top-bar image w-full mx-auto h-full flex">
             <a th:href="@{|/|}" class="logo flex flex-items-center">
-                <img src="https://mimiyoon.co.kr/24d/lr_logo_w310419/part_img/lr01_logo.png" alt="MiMi">
+                <span class="flex justify-center items-center text-5xl">하늘하늘</span>
             </a>
 
             <div class="flex-grow"></div>
 
             <ul class="top-bar icon flex items-center mx-auto">
                 <li>
-                    <a th:if = "${session.UserId == null}" th:href="@{|/user/login|}" class="p-3">로그인</a>
+                    <a th:if = "${session.UserId == null}" th:href="@{|/user/login|}" class="p-3 text-xl">로그인</a>
                 </li>
                 <li>
-                    <a th:if = "${session.UserId != null}" th:href="@{|/user/doLogout|}" class="p-3">로그아웃</a>
+                    <a th:if = "${session.UserId != null}" th:href="@{|/user/doLogout|}" class="p-3 text-xl">로그아웃</a>
                 </li>
                 <li>
-                    <a th:if = "${session.UserId == null}" th:href="@{|/user/join|}" class="p-3">회원가입</a>
+                    <a th:if = "${session.UserId == null}" th:href="@{|/user/join|}" class="p-3 text-xl">회원가입</a>
                 </li>
                 <li>
-                    <a th:if = "${session.UserId != null}" href="#" class="p-3">마이페이지</a>
+                    <a th:if = "${session.UserId != null}" href="#" class="p-3 text-xl">마이페이지</a>
                 </li>
                 <li>
-                    <a th:if = "${session.UserId != null}" href="#" class="p-3">장바구니</a>
+                    <a th:if = "${session.UserId != null}" href="#" class="p-3 text-xl">장바구니</a>
                 </li>
                 <li>
-                    <a th:if = "${session.UserId == null}" th:href="@{|/user/login|}" class="p-3">장바구니</a>
+                    <a th:if = "${session.UserId == null}" th:href="@{|/user/login|}" class="p-3 text-xl">장바구니</a>
                 </li>
             </ul>
         </div>
@@ -49,22 +50,22 @@
             <ul class="flex h-full">
                 <li>
                     <a href="#" class="flex items-center h-full px-5">
-                        <span>MAN</span>
+                        <span class="text-2xl">MAN</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center h-full px-5">
-                        <span>WOMAN</span>
+                        <span class="text-2xl">WOMAN</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center h-full px-5">
-                        <span>TRANNING</span>
+                        <span class="text-2xl">TRANNING</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center h-full px-5">
-                        <span>ACC</span>
+                        <span class="text-2xl">ACC</span>
                     </a>
                 </li>
             </ul>
